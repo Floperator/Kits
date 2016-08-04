@@ -1,0 +1,61 @@
+comment "Exported from Arsenal by Flop";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam";
+this addItemToUniform "muzzle_snds_H";
+this addItemToUniform "11Rnd_45ACP_Mag";
+this addItemToUniform "SmokeShellBlue";
+this addItemToUniform "SmokeShellGreen";
+this addItemToUniform "SmokeShell";
+this addItemToUniform "HandGrenade";
+this addVest "V_PlateCarrier1_rgr";
+for "_i" from 1 to 20 do {this addItemToVest "ACE_fieldDressing";};
+for "_i" from 1 to 15 do {this addItemToVest "ACE_elasticBandage";};
+for "_i" from 1 to 2 do {this addItemToVest "ACE_quikclot";};
+for "_i" from 1 to 3 do {this addItemToVest "ACE_EarPlugs";};
+this addItemToVest "ACE_EntrenchingTool";
+for "_i" from 1 to 3 do {this addItemToVest "ACE_epinephrine";};
+this addItemToVest "HandGrenade";
+for "_i" from 1 to 7 do {this addItemToVest "30Rnd_65x39_caseless_mag";};
+this addItemToVest "11Rnd_45ACP_Mag";
+this addBackpack "B_AssaultPack_mcamo";
+this addItemToBackpack "ACE_NVG_Gen4";
+for "_i" from 1 to 20 do {this addItemToBackpack "ACE_fieldDressing";};
+for "_i" from 1 to 20 do {this addItemToBackpack "ACE_elasticBandage";};
+for "_i" from 1 to 20 do {this addItemToBackpack "ACE_quikclot";};
+for "_i" from 1 to 2 do {this addItemToBackpack "ACE_personalAidKit";};
+for "_i" from 1 to 20 do {this addItemToBackpack "ACE_packingBandage";};
+for "_i" from 1 to 5 do {this addItemToBackpack "ACE_morphine";};
+this addItemToBackpack "ACRE_PRC343_ID_1";
+this addHeadgear "H_HelmetB_light_snakeskin";
+this addGoggles "G_Bandanna_tan";
+
+comment "Add weapons";
+this addWeapon "arifle_MX_F";
+this addPrimaryWeaponItem "acc_pointer_IR";
+this addPrimaryWeaponItem "ACE_optic_Hamr_2D";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ACE_Altimeter";
+this linkItem "ItemRadioAcreFlagged";
+this linkItem "ItemGPS";
+
+comment "Set identity";
+this setFace "WhiteHead_11";
+this setSpeaker "ACE_NoVoice";
+[this,"TFAegis"] call bis_fnc_setUnitInsignia;
